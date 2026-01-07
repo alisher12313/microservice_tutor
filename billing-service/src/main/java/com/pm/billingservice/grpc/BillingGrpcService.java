@@ -16,7 +16,7 @@ public class BillingGrpcService extends BillingServiceImplBase {
         log.info("createBillingAccount request received {}", billingRequest.toString());
 
         BillingResponse response = BillingResponse.newBuilder()
-                .setAccountId("12345")
+                .setAccountId(billingRequest.getPatientId())
                 .setStatus("ACTIVE")
                 .build();
 
